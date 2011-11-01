@@ -30,5 +30,23 @@ MainWindow::MainWindow(core::TaskService *taskService, QWidget *parent)
 
 MainWindow::~MainWindow()
 {
+}
 
+// //----    SLOTS    ----// //
+
+void MainWindow::synchTaskSlot(std::string id)
+{
+    // TODO: complete operation and use sender object to call synchDone()
+    // method
+//    TaskWidget *sender = (TaskWidget *)QObject::sender();
+//    taskCollection_.synchTask(id, sender);
+
+}
+
+void MainWindow::deleteTaskSlot(std::string id)
+{
+    // TODO: complete operation and use sender object to call deleteDone()
+    // method
+//    TaskWidget *sender = (TaskWidget *)QObject::sender();
+//    taskCollection_.deleteTask(id);
 }

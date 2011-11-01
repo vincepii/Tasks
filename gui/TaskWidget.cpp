@@ -30,7 +30,7 @@ TaskWidget::~TaskWidget()
 {
 }
 
-////----    SLOTS    ----////
+// //----    SLOTS    ----// //
 
 void TaskWidget::synchronizeTask()
 {

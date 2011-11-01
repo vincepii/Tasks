@@ -28,6 +28,18 @@ public:
      */
     ~MainWindow();
 
+public slots:
+
+    /**
+     * Slot to TaskWidget synchTaskSignal
+     */
+    void synchTaskSlot(std::string id);
+
+    /**
+     * Slot to TaskWidget deleteTaskSignal
+     */
+    void deleteTaskSlot(std::string id);
+
 private:
     Ui::MainWindowClass ui;
 };
