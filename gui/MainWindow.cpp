@@ -3,6 +3,7 @@
 #include <map>
 #include <QLineEdit>
 #include "Task.h"
+#include "TaskWidget.h"
 
 MainWindow::MainWindow(core::TaskService *taskService, QWidget *parent)
 : QWidget(parent)
@@ -20,9 +21,9 @@ MainWindow::MainWindow(core::TaskService *taskService, QWidget *parent)
     // Add each element to the gui
     std::map<std::string, core::Task>::const_iterator it = tMap.begin();
     for (; it != tMap.end(); it++) {
-        QLineEdit *lineEdit = new QLineEdit(
-                QString::fromStdString(it->second.getContent()), this);
-        ui.tasksVerticalLayout->addWidget(lineEdit);
+        TaskWidget *tw = new TaskWidget(it->first, it->second.getContent(), this);
+        tw->displayContent();
+        ui.tasksVerticalLayout->addWidget(tw);
     }
     this->setLayout(ui.tasksVerticalLayout);
 }

@@ -15,12 +15,15 @@ UI_DIR = ./ui
 HEADERS += exceptions/GenericException.h \
            exceptions/NotInitializedException.h \
            gui/MainWindow.h \
+           gui/TaskWidget.h \
            include/Task.h \
            include/TaskCollection.h \
            include/TaskService.h \
            include/DummyTaskService.h
-FORMS += gui/MainWindow.ui
+FORMS += gui/MainWindow.ui \
+         gui/TaskWidget.ui
 SOURCES += gui/MainWindow.cpp \
+           gui/TaskWidget.cpp \
            src/Task.cpp \
            src/TaskCollection.cpp \
            src/TaskService.cpp \
