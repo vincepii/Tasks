@@ -15,7 +15,18 @@ class TaskWidget : public QWidget
     std::string content_;
 
 public:
+
+    /**
+     * Constructor
+     * @param id Task identifier
+     * @param content Task content
+     * @param parent Parent Qt object
+     */
     TaskWidget(std::string id, std::string content, QWidget *parent = 0);
+
+    /**
+     * Destructor
+     */
     ~TaskWidget();
 
     /**
