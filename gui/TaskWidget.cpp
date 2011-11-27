@@ -26,6 +26,25 @@ void TaskWidget::synchDone()
     ui.synchToolButton->setEnabled(false);
 }
 
+std::string &TaskWidget::getContent()
+{
+    return content_;
+}
+
+void TaskWidget::enableControls()
+{
+    ui.taskLineEdit->setEnabled(true);
+    ui.synchToolButton->setEnabled(true);
+    ui.synchToolButton->setEnabled(true);
+}
+
+void TaskWidget::disableControls()
+{
+    ui.taskLineEdit->setEnabled(false);
+    ui.synchToolButton->setEnabled(false);
+    ui.synchToolButton->setEnabled(false);
+}
+
 TaskWidget::~TaskWidget()
 {
 }

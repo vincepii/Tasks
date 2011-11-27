@@ -39,6 +39,22 @@ public:
      */
     void synchDone();
 
+    /**
+     * Task content getter
+     * @return Task content
+     */
+    std::string &getContent();
+
+    /**
+     * Enables all controls for this task
+     */
+    void enableControls();
+
+    /**
+     * Disables all controls for this task
+     */
+    void disableControls();
+
 public slots:
     /**
      * This slot receives the Synch button click signal
@@ -65,12 +81,12 @@ signals:
     /**
      * Emits synch button pressed signal
      */
-    void synchTaskSignal(std::string id);
+    void synchTaskSignal(std::string &id);
 
     /**
      * Emits delete button pressed signal
      */
-    void deleteTaskSignal(std::string id);
+    void deleteTaskSignal(std::string &id);
 
 private:
     Ui::TaskWidgetClass ui;

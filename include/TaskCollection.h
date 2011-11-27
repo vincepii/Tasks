@@ -54,6 +54,12 @@ public:
         return tasks_;
     }
 
+    /**
+     * Uses the taskService to synch this task
+     * @param id Task Id
+     * @param content Task content
+     */
+    void synchTask(std::string &id, std::string &content);
 
     virtual ~TaskCollection();
 };

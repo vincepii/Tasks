@@ -34,6 +34,11 @@ void TaskCollection::initialize()
     }
 }
 
+void TaskCollection::synchTask(std::string &id, std::string &content)
+{
+    taskService_->updateTask(id, content);
+}
+
 TaskCollection::~TaskCollection()
 {
     tasks_.clear();

@@ -49,6 +49,8 @@ void DummyTaskService::updateTask(const std::string& identifier, const std::stri
     std::map<std::string, Task>::iterator it = tasks_.find(identifier);
     it->second.setContent(content);
     it->second.setChanged(true);
+    // TODO: network effect simulation
+    sleep(2);
 }
 
 void DummyTaskService::deleteTask(const std::string& identifier)
